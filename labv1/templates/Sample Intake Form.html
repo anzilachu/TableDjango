@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+LIMS | Sample Intake Form (FO-043)
+{% endblock %}
+{% block Content %}
+Sample Intake Form (FO-043)
+{% endblock %}
+{% block body %}
+         <hr style="margin-top: 60px;">
+         </hr>
+         <div class="" style="margin:10px;width: 100%;">
+         <div>
+            <!-------------------------------------------------------------------------------->
+            <!-- Buttons For Add New Sample and Download Excel.  -->
+            <!-- <button class="search-input"><i class="fa fa-plus"></i> Add sample 
+               </button> -->
+            <a href="\SampleIntakelog">
+            <button class="search-reset"><i class="fa fa-eye"></i> Sample Intake Log 
+            </button>
+            </a>
+            <a href="\SampleTrackingForm">
+                <button class="search-reset"><i class="fa fa-edit"></i> Sample Tracking Form 
+                </button>
+                </a>
+            <!--  <input class="search-reset" type="submit" value="Add sample"></input>
+               <input class="search-reset" type="submit" value="Download Excel"></input> -->
+         </div>
+         <div style="padding: 20px;">
+            <form action="" class="intake-form" style="width: 900px;">
+               <div class="container">
+                  <div style="padding: 20px;">
+                     <div class="form-group">
+                        <label for="email">Date :</label>
+                        <input class="search-input" size="40" type="date" id="gsearch" name="gsearch">
+                     </div>
+                     <div class="form-group">
+                        <label for="pwd">Sample ID :</label>
+                        <input class="search-input" size="40" type="" id="client_id" placeholder="062223-001" style="width: 40%;">
+                     </div>
+                     <div class="form-group">
+                        <label for="pwd">Sample Name :</label>
+                        <input class="search-input" type="" id="client_id" placeholder="062223-001" style="width: 70%;">
+                     </div>                     
+                     <div class="form-group">
+                        <label for="pwd">Matrix :</label>
+                        <input class="search-input"  list="suggestions" style="width: 40%;" required> 
+                        <datalist style="position: absolute;" id="suggestions">
+                           <option>Flower</option>
+                           <option>Kief</option>
+                           <option>Concentrate</option>
+                           <option>Edible</option>
+                           <option>Topical</option>
+                        </datalist>
+                        
+                     </div>
+                     <div class="form-group">
+                        <label for="pwd">Batch Number :</label>
+                        <input class="search-input" id="" placeholder="" style="width: 40%;">
+                     </div>                     
+                     <div class="form-group">
+                        <label for="pwd">Sample Size :</label>
+                        <input class="search-input" id="" placeholder="" style="width: 42%;">
+                     </div>
+                     <div class="form-group">
+                        <label for="pwd">Batch Size :</label>
+                        <input class="search-input" style="width: 21%;">
+                     </div>
+                     <div class="form-group">
+                        <label for="pwd">Distributor/ Micro business Name :</label>
+                        <input class="search-input" style="width: 50%;" placeholder="Enter Distributor/ Micro business Name">
+                     </div>
+                     <div class="form-group">
+                        <label for="pwd">Distributor / Micro business License # :</label>
+                        <input class="search-input" style="width: 47%;" placeholder="Distributor / Micro business License #">
+                     </div>
+                     <div class="form-group">
+                        <label for="pwd">Chain of Custody Number :</label>
+                        <input class="search-input" style="width: 30%;">
+                     </div>
+                     <button  class="search-reset" style="background-color: green;"><i class="fa fa-save" ></i><a href="" style="color: white;"> Save </a></button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </section>
+{% endblock %}

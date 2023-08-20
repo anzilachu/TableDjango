@@ -1,0 +1,71 @@
+    {% extends 'base.html' %}
+    {% load static %}
+    {% block title %}
+    LIMS | Chain Of Custody Logs (FO-063)
+    {% endblock %}
+    {% block Content %}
+    Chain Of Custody Logs (FO-063)
+    {% endblock %}
+    {% block body %}
+         <hr style="margin-top: 60px;">
+         </hr>
+         <div class="" style="margin:10px;width: 100%;">
+            <!----------Buttons For Add New COC-------->
+            <div>
+               <a href="\chain_of_custody_form">
+               <button class="white-button"><i class="fa fa-plus"></i> Add new COC  
+               </button>
+               </a>
+            </div>
+            <!-------------------------------------------------------------------------------->
+            <!--------------------Table Data starts Here-------------------------------------------->
+            <table id="example" class="table table-striped table-bordered" style="width:100%">
+               <thead>
+                  <tr >
+                     <th>ID</th>
+                     <th>Date</th>
+                     <th>Client ID</th>
+                     <th>Order</th>
+                     <th>View Files</th>
+                     <th>COC ID</th>
+                     <th>Actions</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>112</td>
+                     <td>07052023</td>
+                     <td>Client-653635</td>
+                     <td>1</td>
+                     <td>1. File_Name_1<br> 2.File_Name_2</td>
+                     <td>062223-UBD-01</td>
+                     <td><a href="Chain of Custody Form.html"><button class="white-button"><i class="fa fa-edit"></i></button></a></td>
+                  </tr>
+         
+               </tbody>
+            </table>
+            <!------------------------------End of Table Data------------------------------------------>
+            <nav aria-label="Page navigation example" style="float: right; padding-right: 45px;">
+               <ul class="pagination">
+                  <li class="page-item">
+                     <a class="page-link" href="#" aria-label="Previous">
+                     <span aria-hidden="true">&laquo;</span>
+                     <span class="sr-only">Previous</span>
+                     </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li style="padding-top: 7px;"><b>......</b></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item"><a class="page-link" href="#">6</a></li>
+                  <li class="page-item">
+                     <a class="page-link" href="#" aria-label="Next">
+                     <span aria-hidden="true">&raquo;</span>
+                     <span class="sr-only">Next</span>
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </section>
+      {% endblock %}
