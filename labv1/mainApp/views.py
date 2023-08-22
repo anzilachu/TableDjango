@@ -1,5 +1,7 @@
 from django.shortcuts import render,HttpResponseRedirect
-from .models import *
+from .models import Sample
+from django.shortcuts import render
+import json
 
 
 def Login(Request):
@@ -34,8 +36,30 @@ def SampleRetainLog(Request):
 def SampleRetainForm(Request):
     return render(Request,"Sample Retention Form.html")
 
-def Cannibanoidssamplepreplogsheet(Request):
-    return render(Request,"FO-121 Cannabinoids Sample Prep Log Sheet.html")
+def Cannibanoidssamplepreplogsheet(request):
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            for row in data:
+                sample = Sample(
+                    sample_id=row[0],
+                    weight=row[1],
+                    solvent=row[2],
+                    solvent_volume=row[3],
+                    spike_volume=row[4],
+                    notes=row[5],
+                    analysis_dilution=row[6]
+                )
+                sample.save()
+            return JsonResponse({'success': True})
+        except json.JSONDecodeError:
+            return JsonResponse({'success': False, 'error': 'Invalid JSON data'})
+    return render(request, "FO-121 Cannabinoids Sample Prep Log Sheet.html")
+
+
+
+
+
 
 def Cannibanoidsdatasheet100xdryweight(Request):
     return render(Request,"FO-080 Cannibanoids Data Sheet 100x dry weight .html")

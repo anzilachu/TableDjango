@@ -1,27 +1,26 @@
 from django.urls import path
-
-from .views import *
+from . import views
 
 urlpatterns = [
-    path('',Login),
-    path('homepage/', homePage),
-    path('chain_of_custody/', chain_of_custody,),
-    path('chain_of_custody_form/', chain_of_custody_form, name ="Chain of Custody"),
-    path('SampleIntakelog/', SampleIntakelog),
-    path('SampleIntakeForm/', SampleIntakeForm),
-    path('SampleTrackingLog/', SampleTrackingLog),
-    path('SampleTrackingForm/', SampleTrackingForm),
-    path('SampleRetainLog/', SampleRetainLog),
-    path('SampleRetainForm/', SampleRetainForm),
-     path('Cannibanoidssamplepreplogsheet/', Cannibanoidssamplepreplogsheet),
-    path('Cannibanoidsdatasheet100xdryweight/', Cannibanoidsdatasheet100xdryweight),
-    path('Cannibanoidsdatasheet100xmgperg/', Cannibanoidsdatasheet100xmgperg),
-    path('Cannibanoidsdatasheet100xwetweight/', Cannibanoidsdatasheet100xwetweight),
-    path('Cannibanoidsdatasheet100x/', Cannibanoidsdatasheet100x),
-    path('Cannibanoidsdatasheet2000xdryweight/', Cannibanoidsdatasheet2000xdryweight),
-    path('Cannibanoidsdatasheet2000xmgperg/', Cannibanoidsdatasheet2000xmgperg),
-    path('Cannibanoidsdatasheet2000xwetweight/', Cannibanoidsdatasheet2000xwetweight),
-    path('Cannibanoidsdatasheet2000x/', Cannibanoidsdatasheet2000x),
+    path('',views.Login),
+    path('homepage/',views.homePage),
+    path('chain_of_custody/', views.chain_of_custody,),
+    path('chain_of_custody_form/', views.chain_of_custody_form, name ="Chain of Custody"),
+    path('SampleIntakelog/', views.SampleIntakelog),
+    path('SampleIntakeForm/', views.SampleIntakeForm),
+    path('SampleTrackingLog/', views.SampleTrackingLog),
+    path('SampleTrackingForm/', views.SampleTrackingForm),
+    path('SampleRetainLog/', views.SampleRetainLog),
+    path('SampleRetainForm/', views.SampleRetainForm),
+    path('Cannibanoidssamplepreplogsheet/',views.Cannibanoidssamplepreplogsheet,name='Cannibanoidssamplepreplogsheet'),
+    path('Cannibanoidsdatasheet100xdryweight/', views.Cannibanoidsdatasheet100xdryweight),
+    path('Cannibanoidsdatasheet100xmgperg/', views.Cannibanoidsdatasheet100xmgperg),
+    path('Cannibanoidsdatasheet100xwetweight/', views.Cannibanoidsdatasheet100xwetweight),
+    path('Cannibanoidsdatasheet100x/', views.Cannibanoidsdatasheet100x),
+    path('Cannibanoidsdatasheet2000xdryweight/', views.Cannibanoidsdatasheet2000xdryweight),
+    path('Cannibanoidsdatasheet2000xmgperg/', views.Cannibanoidsdatasheet2000xmgperg),
+    path('Cannibanoidsdatasheet2000xwetweight/', views.Cannibanoidsdatasheet2000xwetweight),
+    path('Cannibanoidsdatasheet2000x/', views.Cannibanoidsdatasheet2000x),
     
 ]
 
